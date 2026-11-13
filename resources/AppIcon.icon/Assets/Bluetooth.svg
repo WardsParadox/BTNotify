@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- Original simplified Bluetooth rune; no raster artwork or baked effects. -->
+  <path d="M302 360 L648 668 L448 824 V200 L648 356 L302 664"
+        fill="none" stroke="white" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

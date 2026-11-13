@@ -1,0 +1,197 @@
+2026-11-10 12:01:03.216 btnotify-power-probe[40642:28517388] shared controller class: _BCPowerSourceController
+2026-11-10 12:01:03.218 btnotify-power-probe[40642:28517388] observer callback: (
+)
+2026-11-10 12:01:03.218 btnotify-power-probe[40642:28517388] observer callback: (
+)
+2026-11-10 12:01:05.221 btnotify-power-probe[40642:28517388] BC shared controller: 0 devices
+2026-11-10 12:01:05.223 btnotify-power-probe[40642:28517388] IOPSCopyPowerSourcesByType: available
+2026-11-10 12:01:05.225 btnotify-power-probe[40642:28517388] IOPS type -1: 1 sources
+2026-11-10 12:01:05.226 btnotify-power-probe[40642:28517388]   {
+    "Current Capacity" = 79;
+    "Is Charging" = 0;
+    "Is Present" = 1;
+    "Max Capacity" = 100;
+    Name = "InternalBattery-0";
+    "Power Source State" = "AC Power";
+    "Transport Type" = Internal;
+    Type = InternalBattery;
+}
+2026-11-10 12:01:05.227 btnotify-power-probe[40642:28517388]   keys: (
+    "Battery Provides Time Remaining",
+    Current,
+    "Current Capacity",
+    DesignCycleCount,
+    "Hardware Serial Number",
+    "Is Charged",
+    "Is Charging",
+    "Is Present",
+    "LPM Active",
+    "Max Capacity",
+    Name,
+    "Power Source ID",
+    "Power Source State",
+    "Time to Empty",
+    "Time to Full Charge",
+    "Transport Type",
+    Type
+)
+2026-11-10 12:01:05.228 btnotify-power-probe[40642:28517388]   Power Source ID: <source-id>
+2026-11-10 12:01:05.228 btnotify-power-probe[40642:28517388]   considers: 1
+2026-11-10 12:01:05.232 btnotify-power-probe[40642:28517388]   BC ordered count: 1
+2026-11-10 12:01:05.232 btnotify-power-probe[40642:28517388] IOPS type 0: 2 sources
+2026-11-10 12:01:05.233 btnotify-power-probe[40642:28517388]   {
+    "Current Capacity" = 79;
+    "Is Charging" = 0;
+    "Is Present" = 1;
+    "Max Capacity" = 100;
+    Name = "InternalBattery-0";
+    "Power Source State" = "AC Power";
+    "Transport Type" = Internal;
+    Type = InternalBattery;
+}
+2026-11-10 12:01:05.233 btnotify-power-probe[40642:28517388]   keys: (
+    "Battery Provides Time Remaining",
+    Current,
+    "Current Capacity",
+    DesignCycleCount,
+    "Hardware Serial Number",
+    "Is Charged",
+    "Is Charging",
+    "Is Present",
+    "LPM Active",
+    "Max Capacity",
+    Name,
+    "Power Source ID",
+    "Power Source State",
+    "Time to Empty",
+    "Time to Full Charge",
+    "Transport Type",
+    Type
+)
+2026-11-10 12:01:05.234 btnotify-power-probe[40642:28517388]   Power Source ID: <source-id>
+2026-11-10 12:01:05.234 btnotify-power-probe[40642:28517388]   considers: 1
+2026-11-10 12:01:05.234 btnotify-power-probe[40642:28517388]   {
+    "Accessory Category" = Keyboard;
+    "Current Capacity" = 54;
+    "Max Capacity" = 100;
+    Name = "Bluetooth keyboard";
+    "Power Source State" = "Battery Power";
+    "Transport Type" = "Bluetooth LE";
+    Type = "Accessory Source";
+}
+2026-11-10 12:01:05.235 btnotify-power-probe[40642:28517388]   keys: (
+    "Accessory Category",
+    "Accessory Identifier",
+    "Current Capacity",
+    "Low Warn Level",
+    "Max Capacity",
+    Name,
+    "Power Source ID",
+    "Power Source State",
+    "Product ID",
+    "Transport Type",
+    Type,
+    "Vendor ID",
+    "Vendor ID Source"
+)
+2026-11-10 12:01:05.235 btnotify-power-probe[40642:28517388]   Power Source ID: <source-id>
+2026-11-10 12:01:05.235 btnotify-power-probe[40642:28517388]   Accessory Identifier: <accessory-identifier>
+2026-11-10 12:01:05.236 btnotify-power-probe[40642:28517388]   considers: 1
+2026-11-10 12:01:05.237 btnotify-power-probe[40642:28517388]   BC ordered count: 2
+2026-11-10 12:01:05.238 btnotify-power-probe[40642:28517388] IOPS type 1: 1 sources
+2026-11-10 12:01:05.238 btnotify-power-probe[40642:28517388]   {
+    "Current Capacity" = 79;
+    "Is Charging" = 0;
+    "Is Present" = 1;
+    "Max Capacity" = 100;
+    Name = "InternalBattery-0";
+    "Power Source State" = "AC Power";
+    "Transport Type" = Internal;
+    Type = InternalBattery;
+}
+2026-11-10 12:01:05.239 btnotify-power-probe[40642:28517388]   keys: (
+    "Battery Provides Time Remaining",
+    Current,
+    "Current Capacity",
+    DesignCycleCount,
+    "Hardware Serial Number",
+    "Is Charged",
+    "Is Charging",
+    "Is Present",
+    "LPM Active",
+    "Max Capacity",
+    Name,
+    "Power Source ID",
+    "Power Source State",
+    "Time to Empty",
+    "Time to Full Charge",
+    "Transport Type",
+    Type
+)
+2026-11-10 12:01:05.239 btnotify-power-probe[40642:28517388]   Power Source ID: <source-id>
+2026-11-10 12:01:05.240 btnotify-power-probe[40642:28517388]   considers: 1
+2026-11-10 12:01:05.241 btnotify-power-probe[40642:28517388]   BC ordered count: 1
+2026-11-10 12:01:05.243 btnotify-power-probe[40642:28517388] IOPS type 2: 0 sources
+2026-11-10 12:01:05.247 btnotify-power-probe[40642:28517388]   BC ordered count: 0
+2026-11-10 12:01:05.249 btnotify-power-probe[40642:28517388] IOPS type 3: 1 sources
+2026-11-10 12:01:05.250 btnotify-power-probe[40642:28517388]   {
+    "Current Capacity" = 79;
+    "Is Charging" = 0;
+    "Is Present" = 1;
+    "Max Capacity" = 100;
+    Name = "InternalBattery-0";
+    "Power Source State" = "AC Power";
+    "Transport Type" = Internal;
+    Type = InternalBattery;
+}
+2026-11-10 12:01:05.251 btnotify-power-probe[40642:28517388]   keys: (
+    "Battery Provides Time Remaining",
+    Current,
+    "Current Capacity",
+    DesignCycleCount,
+    "Hardware Serial Number",
+    "Is Charged",
+    "Is Charging",
+    "Is Present",
+    "LPM Active",
+    "Max Capacity",
+    Name,
+    "Power Source ID",
+    "Power Source State",
+    "Time to Empty",
+    "Time to Full Charge",
+    "Transport Type",
+    Type
+)
+2026-11-10 12:01:05.251 btnotify-power-probe[40642:28517388]   Power Source ID: <source-id>
+2026-11-10 12:01:05.252 btnotify-power-probe[40642:28517388]   considers: 1
+2026-11-10 12:01:05.252 btnotify-power-probe[40642:28517388]   BC ordered count: 1
+2026-11-10 12:01:05.253 btnotify-power-probe[40642:28517388] IOPS type 4: 1 sources
+2026-11-10 12:01:05.253 btnotify-power-probe[40642:28517388]   {
+    "Accessory Category" = Keyboard;
+    "Current Capacity" = 54;
+    "Max Capacity" = 100;
+    Name = "Bluetooth keyboard";
+    "Power Source State" = "Battery Power";
+    "Transport Type" = "Bluetooth LE";
+    Type = "Accessory Source";
+}
+2026-11-10 12:01:05.254 btnotify-power-probe[40642:28517388]   keys: (
+    "Accessory Category",
+    "Accessory Identifier",
+    "Current Capacity",
+    "Low Warn Level",
+    "Max Capacity",
+    Name,
+    "Power Source ID",
+    "Power Source State",
+    "Product ID",
+    "Transport Type",
+    Type,
+    "Vendor ID",
+    "Vendor ID Source"
+)
+2026-11-10 12:01:05.254 btnotify-power-probe[40642:28517388]   Power Source ID: <source-id>
+2026-11-10 12:01:05.254 btnotify-power-probe[40642:28517388]   Accessory Identifier: <accessory-identifier>
+2026-11-10 12:01:05.254 btnotify-power-probe[40642:28517388]   considers: 1
+2026-11-10 12:01:05.255 btnotify-power-probe[40642:28517388]   BC ordered count: 1

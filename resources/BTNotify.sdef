@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+<dictionary title="BTNotify Terminology">
+    <suite name="Standard Suite" code="????" description="Standard application commands.">
+        <command name="quit" code="aevtquit" description="Quit BTNotify.">
+            <cocoa class="NSQuitCommand"/>
+        </command>
+        <class name="application" code="capp" description="BTNotify.">
+            <cocoa class="NSApplication"/>
+            <property name="name" code="pnam" type="text" access="r"/>
+            <property name="version" code="vers" type="text" access="r"/>
+            <responds-to command="quit">
+                <cocoa method="handleQuitScriptCommand:"/>
+            </responds-to>
+        </class>
+    </suite>
+    <suite name="BTNotify Suite" code="BTNt" description="Read accessory batteries and connection status.">
+        <record-type name="accessory reading" code="BTac" description="The last observed state of an accessory.">
+            <property name="id" code="ID  " type="text" access="r" description="The accessory identifier."/>
+            <property name="name" code="pnam" type="text" access="r" description="The device name."/>
+            <property name="connected" code="BTcn" type="boolean" access="r" description="Whether the accessory is connected."/>
+            <property name="battery level" code="BTbl" type="any" access="r" description="Battery percentage from 0 to 100, or missing value when unknown."/>
+            <property name="charging" code="BTch" type="boolean" access="r" description="Whether charging is reported."/>
+            <property name="device type" code="BTkd" type="text" access="r" description="The accessory type."/>
+        </record-type>
+        <command name="accessory status" code="BTNtstat" description="Return the latest accessory readings without polling again.">
+            <result description="A list of accessory readings; unknown battery levels are missing value.">
+                <type type="accessory reading" list="yes"/>
+            </result>
+        </command>
+        <command name="refresh accessories" code="BTNtrfsh" description="Poll accessories now and return their readings. Normal notification rules apply.">
+            <result description="The updated accessory readings.">
+                <type type="accessory reading" list="yes"/>
+            </result>
+        </command>
+    </suite>
+</dictionary>
