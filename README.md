@@ -79,6 +79,21 @@ env CLANG_MODULE_CACHE_PATH=/private/tmp/btnotify-clang-cache \
 
 `BTNotify --diagnose-notifications` reads permission, delivered/pending counts, session state, and app notification preferences without sending an alert. `BTNotify --check-notification-requests` checks that successive alerts have distinct identities and retain the dismissal category and title-only content, without posting them. `BTNotify --diagnose` prints native inventory and power-source readings locally, including device identifiers. `BTNotify --check-ui` checks offscreen expand/collapse fixture sizes, device symbols and installed artwork, and equal-sized hollow/red badge rendering. `BTNotify --check-battery-indicator` verifies threshold changes, charging, dismissal, missing readings, and multiple accessories independently of notification permission or delivery. `BTNotify --check-disclosure` replays expansion and collapse offscreen and checks that the footer does not slide or fade after the panel reaches its new size. `BTNotify --check-swiftui-resize` drives the real SwiftUI disclosure binding through its natural-size callback and verifies intermediate heights in both directions and that settings remain visible during the closing ease. `BTNotify --check-settings-actions` verifies ordinary, Option, and Control–Option settings actions without synthesizing desktop input. `BTNotify --check-resize` samples direct size requests over time, checks both directions and a rapid reversal, and verifies immediate nonanimated sizing. `BTNotify --check-thresholds` verifies debug choices, high-threshold persistence, validated polling intervals and their 30-second default, and the default-off reminder preference with an isolated preferences domain. These checks do not verify live onscreen motion or send notifications. Accessory rows expose the device name, connection, charging, and battery status as one accessibility element. Controls have explicit spoken names and reminder/check-time hints. Control–Option assistive activation opens the ordinary panel; Option-clicking Notification settings reveals debug controls. The retained live accessibility tools change focus/input and must only be run with explicit permission when the user is not typing. They are never run by the app or its build.
 
+## Secret checks and Git hooks
+
+With [mise](https://mise.jdx.dev/) installed, set up the development tools and repository hooks:
+
+```sh
+mise install
+mise run hooks:install
+```
+
+The project pins the official [awslabs/git-secrets](https://github.com/awslabs/git-secrets) 1.3.0 script by version and SHA-256 through mise's HTTP backend. hk runs through `mise x`, so hooks resolve that pinned copy. The setup installs hooks for this repository without replacing global Git settings or installing git-secrets' separate hooks.
+
+Pre-commit checks the Git index; commit-msg checks the proposed message; pre-push checks file contents across all local history, including secrets removed in later commits. These checks do not modify or stage files. Shared rules in [.git-secrets](.git-secrets) detect AWS credentials, GitHub tokens, private-key headers, Slack tokens, Google API keys, and Stripe keys. The setup does not read credentials from your home directory or add broad allowlists.
+
+Run `mise run secrets:check` for tracked and eligible untracked files, or `mise run secrets:history` for committed file history. These are pattern-based checks; the reviewed scope and results are recorded in [the security review](research/SECURITY-REVIEW.md).
+
 ## Research
 
 The requested [REA skill](.agents/skills/reverse-engineer-anything/SKILL.md) is installed for this project. See [the investigation](research/INVESTIGATION.md) and [the draft API report](research/BATTERY-API-BUG-DRAFT.md). Incorrect Bluetooth percentages have not been reproduced; the report has not been submitted. The original Objective-C battery reader is retained only as a comparison reference under `research/reference-battery-reader`; it is not an app dependency.

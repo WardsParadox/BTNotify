@@ -1,0 +1,38 @@
+amends "package://github.com/jdx/hk/releases/download/v2.4.0/hk@2.4.0#/Config.pkl"
+
+// Git owns the index and history; hk runs each scan once without changing files.
+local scan = #"git -c include.path="$(git rev-parse --show-toplevel)/.git-secrets" secrets"#
+
+hooks {
+  ["pre-commit"] {
+    fix = false
+    stage = false
+    stash = "none"
+    steps {
+      ["git-secrets"] {
+        check = "\(scan) --scan --cached"
+      }
+    }
+  }
+  ["commit-msg"] {
+    steps {
+      ["git-secrets"] {
+        check = "\(scan) --commit_msg_hook {{commit_msg_file}}"
+      }
+    }
+  }
+  ["pre-push"] {
+    steps {
+      ["git-secrets"] {
+        check = "\(scan) --scan-history"
+      }
+    }
+  }
+  ["check"] {
+    steps {
+      ["git-secrets"] {
+        check = "\(scan) --scan --untracked"
+      }
+    }
+  }
+}

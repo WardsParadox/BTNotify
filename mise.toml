@@ -1,0 +1,20 @@
+[tools]
+hk = "2.4.0"
+pkl = "0.32.1"
+
+[tools."http:git-secrets"]
+version = "1.3.0"
+url = "https://raw.githubusercontent.com/awslabs/git-secrets/1.3.0/git-secrets"
+checksum = "sha256:df9a5d2beeda1c83e23105f46efe464bb4c97f8328e1e66754d7daacfaf7272b"
+
+[tasks."hooks:install"]
+description = "Install repository-local hk hooks through mise"
+run = "hk install --mise"
+
+[tasks."secrets:check"]
+description = "Scan tracked and eligible untracked files for secrets"
+run = "hk check --all"
+
+[tasks."secrets:history"]
+description = "Scan file contents across all local Git history for secrets"
+run = 'git -c include.path="$(git rev-parse --show-toplevel)/.git-secrets" secrets --scan-history'
